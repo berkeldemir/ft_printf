@@ -6,7 +6,7 @@
 /*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:24:49 by beldemir          #+#    #+#             */
-/*   Updated: 2024/10/27 18:28:46 by beldemir         ###   ########.fr       */
+/*   Updated: 2024/10/27 21:10:55 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,6 @@ int ft_print_x(int n, const char c)
 	if (c == 'x')
 		return (ft_base(n, "0123456789abcdef"));
 	if (c == 'X')
-		return (ft_base(n, "0123456789ABDCDEF"));
+		return (ft_base(n, "0123456789ABCDEF"));
+	return (0);
 }

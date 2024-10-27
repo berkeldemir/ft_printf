@@ -6,7 +6,7 @@
 /*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:54:32 by beldemir          #+#    #+#             */
-/*   Updated: 2024/10/27 17:10:19 by beldemir         ###   ########.fr       */
+/*   Updated: 2024/10/27 20:57:26 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int	ft_printf(const char *str, ...)
 	va_start(args, str);
 	int count;
 	
+	count = 0;
 	while (*str)
 	{
 		if (*str == '%')
@@ -28,7 +29,7 @@ int	ft_printf(const char *str, ...)
 			count += ft_check_parameter(*str, args);
 		}
 		else
-			count += ft_print_c(va_arg(args, char));
+			count += ft_print_c(*str);
 		str++;
 	}
 	va_end(args);

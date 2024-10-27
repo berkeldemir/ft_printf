@@ -1,23 +1,20 @@
 NAME = ft_printf.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-SRCS = ft_printf.c
-#SRCS_BONUS = ft_.......
-OBJS = $(SRCS:.c:.o)
+SRCS = ft_print_c.c ft_print_i_d.c ft_print_s.c ft_print_p.c ft_base.c \
+		ft_print_u.c ft_print_x.c ft_printf.c ft_check_parameter.c
+OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $< $^
-
-#bonus: $(OBJS_BONUS)
-
+	ar rc ${NAME} ${OBJS}
 
 clean:
-	$(RM) $(OBJS)
+	rm -rf $(OBJS)
 
 fclean: clean
-	$(RM) $(NAME)
+	rm -rf $(NAME)
 
 re: fclean all
 
