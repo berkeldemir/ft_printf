@@ -1,38 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_print_s.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 18:54:32 by beldemir          #+#    #+#             */
-/*   Updated: 2024/10/27 17:10:19 by beldemir         ###   ########.fr       */
+/*   Created: 2024/10/24 19:17:05 by beldemir          #+#    #+#             */
+/*   Updated: 2024/10/27 18:28:49 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdarg.h>
 #include "ft_printf.h"
 
-int	ft_printf(const char *str, ...)
+int	ft_print_s(char *s)
 {
-	va_list	args;
-	va_start(args, str);
-	int count;
-	
-	while (*str)
-	{
-		if (*str == '%')
-		{
-			str++;
-			count += ft_check_parameter(*str, args);
-		}
-		else
-			count += ft_print_c(va_arg(args, char));
-		str++;
-	}
-	va_end(args);
-	if (count < 0)
-		return (-1);
+	int	count;
+
+	count = 0;
+	if (!s)
+		return (0);
+	while (*s)
+		count += ft_print_c(*s++);
 	return (count);
 }
