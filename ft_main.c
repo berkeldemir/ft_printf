@@ -6,7 +6,7 @@
 /*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 18:07:26 by beldemir          #+#    #+#             */
-/*   Updated: 2024/10/28 04:49:36 by beldemir         ###   ########.fr       */
+/*   Updated: 2024/10/28 06:11:20 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ int	main(void)
 
 	i = 1245;
 	str = "berk";
-	printf("%#X\n", 124);
-	ft_printf("%#X", 124);
+	printf("%  +  +i\n", 124);
+	ft_printf("%  +  +i", 124);
 }

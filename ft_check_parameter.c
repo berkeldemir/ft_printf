@@ -6,7 +6,7 @@
 /*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 19:24:46 by beldemir          #+#    #+#             */
-/*   Updated: 2024/10/28 04:45:53 by beldemir         ###   ########.fr       */
+/*   Updated: 2024/10/28 06:18:07 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_check_parameter(const char c, va_list args, int flag)
 	if (c == 'c')
 		return (ft_print_c(va_arg(args, int)));
 	if (c == 'i' || c == 'd')
-		return (ft_print_i_d(va_arg(args, int)));
+		return (ft_print_i_d(va_arg(args, int), flag));
 	if (c == 'p')
 		return (ft_print_p(va_arg(args, void *)));
 	if (c == 'x' || c == 'X')
