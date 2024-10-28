@@ -6,7 +6,7 @@
 /*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 18:31:35 by beldemir          #+#    #+#             */
-/*   Updated: 2024/10/27 19:07:57 by beldemir         ###   ########.fr       */
+/*   Updated: 2024/10/28 01:23:21 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_print_p(void *ptr)
 {
-	int count;
+	int	count;
 
 	count = ft_print_s("0x");
 	count += ft_base((unsigned long)ptr, "0123456789abcdef");

@@ -6,20 +6,18 @@
 /*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:54:32 by beldemir          #+#    #+#             */
-/*   Updated: 2024/10/27 20:57:26 by beldemir         ###   ########.fr       */
+/*   Updated: 2024/10/28 03:27:51 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdarg.h>
 #include "ft_printf.h"
 
 int	ft_printf(const char *str, ...)
 {
 	va_list	args;
+	int		count;
+
 	va_start(args, str);
-	int count;
-	
 	count = 0;
 	while (*str)
 	{

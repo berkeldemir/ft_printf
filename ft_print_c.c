@@ -6,7 +6,7 @@
 /*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 19:14:56 by beldemir          #+#    #+#             */
-/*   Updated: 2024/10/27 20:46:55 by beldemir         ###   ########.fr       */
+/*   Updated: 2024/10/28 01:22:59 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_print_c(char const c)
 {
 	int	count;
-	
+
 	count = write(1, &c, 1);
 	if (count == 1)
 		return (1);
