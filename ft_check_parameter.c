@@ -6,13 +6,25 @@
 /*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 19:24:46 by beldemir          #+#    #+#             */
-/*   Updated: 2024/10/28 02:18:40 by beldemir         ###   ########.fr       */
+/*   Updated: 2024/10/28 04:45:53 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_check_parameter(const char c, va_list args)
+int	ft_check_flag(const char c)
+{
+	if (c == '#')
+		return (1);
+	if (c == ' ')
+		return (2);
+	if (c == '+')
+		return (3);
+	else
+		return (0);
+}
+
+int	ft_check_parameter(const char c, va_list args, int flag)
 {
 	if (c == '%')
 		return (ft_print_c('%'));
@@ -23,7 +35,7 @@ int	ft_check_parameter(const char c, va_list args)
 	if (c == 'p')
 		return (ft_print_p(va_arg(args, void *)));
 	if (c == 'x' || c == 'X')
-		return (ft_print_x(va_arg(args, unsigned int), c));
+		return (ft_print_x(va_arg(args, unsigned int), c, flag));
 	if (c == 'u')
 		return (ft_print_u(va_arg(args, unsigned int)));
 	if (c == 's')

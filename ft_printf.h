@@ -6,7 +6,7 @@
 /*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 19:05:15 by beldemir          #+#    #+#             */
-/*   Updated: 2024/10/28 03:50:34 by beldemir         ###   ########.fr       */
+/*   Updated: 2024/10/28 04:40:56 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,10 @@ int	ft_print_s(char *s);
 int	ft_print_p(void *p);
 int	ft_print_i_d(int i);
 int	ft_print_u(unsigned int n);
-int	ft_print_x(unsigned long num, const char ch);
+int	ft_print_x(unsigned long n, const char c, int flag);
 
-int	ft_check_parameter(const char c, va_list args);
+int	ft_check_flag(const char c);
+int	ft_check_parameter(const char c, va_list args, int flag);
 int	ft_printf(const char *str, ...);
 
 #endif

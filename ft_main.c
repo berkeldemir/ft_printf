@@ -6,11 +6,12 @@
 /*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 18:07:26 by beldemir          #+#    #+#             */
-/*   Updated: 2024/10/28 03:32:52 by beldemir         ###   ########.fr       */
+/*   Updated: 2024/10/28 04:49:36 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 int	main(void)
 {
@@ -19,6 +20,6 @@ int	main(void)
 
 	i = 1245;
 	str = "berk";
-	printf("%s\n", str);
-	ft_printf("%s", str);
+	printf("%#X\n", 124);
+	ft_printf("%#X", 124);
 }
