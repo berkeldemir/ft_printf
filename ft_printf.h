@@ -6,7 +6,7 @@
 /*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 19:05:15 by beldemir          #+#    #+#             */
-/*   Updated: 2024/10/28 03:29:13 by beldemir         ###   ########.fr       */
+/*   Updated: 2024/10/28 03:50:34 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,19 @@
 # define FT_PRINTF_H
 # include <stdarg.h>
 # include <unistd.h>
+
+# ifdef __APPLE__
+#  define NULLSTRING "(null)"
+#  define NULLPOINTER "0x0"
+# else
+#  define NULLSTRING "(null)"
+#  define NULLPOINTER "(nil)"
+# endif
+
+# define INT_MAX 2147483647
+# define INT_MIN -2147483648
+# define HEXAUP "0123456789ABCDEF"
+# define HEXADOWN "0123456789abcdef"
 
 int	ft_print_c(char c);
 int	ft_base(unsigned long num, char *ref);
