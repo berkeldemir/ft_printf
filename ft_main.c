@@ -6,7 +6,7 @@
 /*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 07:08:36 by beldemir          #+#    #+#             */
-/*   Updated: 2024/10/28 10:44:30 by beldemir         ###   ########.fr       */
+/*   Updated: 2024/11/02 18:18:00 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ int	main(void)
 
 	i = 1245;
 	str = "b";
-	printf(" a% 1sa\n", "");
-	ft_printf(" a% 1sa\n", "");
-	ft_printf("<------------------>\n");
-	printf("a%  1s a\n", "");
+	printf("%cx%cx%cx\n", '0', 0, '1');
+	ft_printf("%cx%cx%cx\n", '0', 0, '1');
+	ft_printf("-\n-\n-\n");
+	//printf("a%  1s a\n", "");
 	ft_printf("a%  1s a", "");
 }

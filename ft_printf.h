@@ -6,7 +6,7 @@
 /*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 19:05:15 by beldemir          #+#    #+#             */
-/*   Updated: 2024/10/28 08:45:17 by beldemir         ###   ########.fr       */
+/*   Updated: 2024/11/02 18:20:41 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 # define HEXAUP "0123456789ABCDEF"
 # define HEXADOWN "0123456789abcdef"
 
-int	ft_print_c(char c);
+int	ft_print_c(int const c);
 int	ft_base(unsigned long num, char *ref);
 int	ft_print_s(char *s);
 int	ft_print_p(void *p);
