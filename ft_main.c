@@ -6,7 +6,7 @@
 /*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 07:08:36 by beldemir          #+#    #+#             */
-/*   Updated: 2024/11/05 10:34:05 by beldemir         ###   ########.fr       */
+/*   Updated: 2024/11/05 11:54:32 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int	main(void)
 
 	i = 1245;
 	str = "b";
-	printf("previous return val: %d\n", printf("\001,\002,\007,\v,\010,\f,\r,\n"));
-	printf("previous return val: %d\n", ft_printf("\001,\002,\007,\v,\010,\f,\r,\n"));
+	printf("previous return val: %d\n", ft_printf("%c%c%c\n", '0', 0, '1'));
+	printf("previous return val: %d\n", printf("%c%c%c\n", '0', 0, '1'));
 	ft_printf("-\n-\n-\n");
 	//printf("a%  1s a\n", "");
 	//ft_printf("a%  1s a", "");
