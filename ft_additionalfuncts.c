@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_main.c                                          :+:      :+:    :+:   */
+/*   ft_additionalfuncts.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 07:08:36 by beldemir          #+#    #+#             */
-/*   Updated: 2024/11/05 10:34:05 by beldemir         ###   ########.fr       */
+/*   Created: 2024/11/05 10:25:28 by beldemir          #+#    #+#             */
+/*   Updated: 2024/11/05 10:27:27 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
-int	main(void)
+int	ft_atoiforprintf(char *str)
 {
-	unsigned int	i;
-	char			*str;
+	long	i;
+	long	num;
 
-	i = 1245;
-	str = "b";
-	printf("previous return val: %d\n", printf("\001,\002,\007,\v,\010,\f,\r,\n"));
-	printf("previous return val: %d\n", ft_printf("\001,\002,\007,\v,\010,\f,\r,\n"));
-	ft_printf("-\n-\n-\n");
-	//printf("a%  1s a\n", "");
-	//ft_printf("a%  1s a", "");
+	i = 0;
+	num = 0;
+	while (str[i] != '\0' && ft_isdigit(str[i]) == 1)
+		num = (num * 10) + (str[i] - 48);
+	return (num);
 }
