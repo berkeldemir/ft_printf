@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: beldemir <beldemir@42istanbul.com.tr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:54:32 by beldemir          #+#    #+#             */
-/*   Updated: 2024/11/04 19:08:22 by beldemir         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:53:55 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf_while(const char *str, va_list args, int count, int flag)
+static int	ft_printf_while(const char *str, va_list *args, int count, int flag)
 {
 	while (*str)
 	{
@@ -27,7 +27,7 @@ int	ft_printf_while(const char *str, va_list args, int count, int flag)
 				if (*str++ == '+')
 					flag = 3;
 			}
-			count += ft_check_parameter(*str, &args, flag);
+			count += ft_check_parameter(*str, args, flag);
 		}
 		else
 			count += ft_print_c(*str);
@@ -45,7 +45,7 @@ int	ft_printf(const char *str, ...)
 	va_start(args, str);
 	flag = 0;
 	count = 0;
-	count += ft_printf_while(str, args, count, flag);
+	count += ft_printf_while(str, &args, count, flag);
 	va_end(args);
 	return (count);
 }
