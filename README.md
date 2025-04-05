@@ -45,7 +45,7 @@ Hello World!
 ## 👨‍💻 Code
 Variadic functions are the cornerstone of this project, and I would like to start by discussing them.
 
-### Variadic Functions <stdarg.h>
+### 1. Variadic Functions <stdarg.h>
 You probably noticed that ft_printf function declared as
 ```c
 int	ft_printf(const char *str, ...);
@@ -83,7 +83,7 @@ Examples above will work for %d (or %i), %s and %u in order. So it is important 
 >>
 >> If you want to do that you can use **va_copy(va_list dst, va_list src);** It will copy the existing va_list into another, to use back again.
 
-### (nil) or 0x0?
+### 2. (nil) or 0x0?
 
 In printf if you want to print a NULL value with %p, it will give you **"0x0"** if you are working on a Mac and **"(nil)"** if you are on a Linux.
 
@@ -101,7 +101,7 @@ So i came up with this solution in my header file:
 
 It basically looks if \_\_APPLE\_\_ defined in the system, if it is: NULLPOINTER macro will be "0x0" if not: it will be "(nil)".
 
-### How ft_base works?
+### 3. How ft_base works?
 
 While printing a number in hexadecimal way if the number is:
 - between 0-15     -> 1 character will be printed -- *(0 and f)*
